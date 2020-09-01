@@ -1,0 +1,2 @@
+/usr/bin/ar qc libex_01_01_library.a  CMakeFiles/ex_01_01_library.dir/hello.cpp.o
+/usr/bin/ranlib libex_01_01_library.a

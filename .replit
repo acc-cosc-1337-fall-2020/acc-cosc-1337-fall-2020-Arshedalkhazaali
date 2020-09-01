@@ -1,1 +1,3 @@
 language = "cpp"
+#run="cd src/examples/01_module/01_hello_world; cmake .; ./ex_01_01_exe;"
+run="mkdir -p ../build; cd ../build; cmake ../acc-cosc-1337-fall-2020-Arshedalkhazaali/; make; cd src/examples/01_module/01_hello_world; ./ex_01_01_exe;"
