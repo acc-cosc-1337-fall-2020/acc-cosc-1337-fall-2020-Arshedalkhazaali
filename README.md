@@ -2,4 +2,4 @@
 # acc-cosc-1337-starter
 C++ starter code with CMake 
 test sync 
-updated in replit.it
+updated in replit.
