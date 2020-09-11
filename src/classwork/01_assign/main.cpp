@@ -5,8 +5,8 @@
 
 
 int main() 
+
+int multiply_numbers (int num1, int num2)
 {
-
-	return 0;
+	return unm1 * num2;
 }
-
