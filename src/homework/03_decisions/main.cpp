@@ -56,3 +56,51 @@ int main()
 
 	return 0;
 }
+
+int main ()
+{
+	
+	
+	int get_letter_grade_using_if;
+	char letter_grade;
+
+	//to ask user for a number between 1 and 100 I need ....
+	
+	cout<<"Please enter a number between 1-100 and press enter."<<endl;
+	cout<<" The program will then show you "<<endl;
+	cout<<"the letter grade that corresponds to that number."<<endl;
+	cin>>score;
+
+	
+	if (score<0 || score >100)
+	{
+		cout<<"Test scores must be in interval 1-100. "<<endl;
+		cout<<"Please exit the program and run it again"<<endl;
+	}
+
+	else if (score <60)
+	{ 
+		letterGrade = 'F';
+	}
+	else if (score <70)
+	{
+		letterGrade = 'D';
+	}
+	else if (score < 80)
+	{
+		letterGrade = 'C';
+	}
+	else if (score < 90)
+	{
+		letterGrade = 'B';
+	}
+	else if  (score <=100)
+	{
+		letterGrade = 'A';
+	}  
+
+	// and I will this code to display the output  
+	cout<<"The letter grade is: " <<letter_grade<<endl;
+	system("pause");
+	return 0;
+}

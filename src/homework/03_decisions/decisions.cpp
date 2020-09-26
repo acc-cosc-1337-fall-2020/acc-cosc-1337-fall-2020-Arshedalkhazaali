@@ -46,3 +46,57 @@ double calculate_gpa(int credit_hours, double credit_points)
 	return credit_points / credit_hours;
 }
 
+int get_letter_grade_using_if (std::int grade);
+{
+	if (score<0 || score >100)
+	{
+		cout<<"Test scores must be in interval 1-100. "<<endl;
+		cout<<"Please exit the program and run it again"<<endl;
+	}
+
+	else if (score <60)
+	{ 
+		letterGrade = 'F';
+	}
+	else if (score <70)
+	{
+		letterGrade = 'D';
+	}
+	else if (score < 80)
+	{
+		letterGrade = 'C';
+	}
+	else if (score < 90)
+	{
+		letterGrade = 'B';
+	}
+	else if  (score <=100)
+	{
+		letterGrade = 'A';
+	}  
+	return 0;
+}
+
+string get_letter_grade_using_switch(int grade );
+{
+	string result;
+	switch (grade)
+	{
+	
+	case 1:
+		result = "option 1"
+		break;
+	case 2:
+		result = "option 2"
+		break;
+	case 3:
+		result = "option 3"
+		break;
+	case 4:
+		result = "option 4"
+		break;
+	
+	}
+
+	return result 
+}
