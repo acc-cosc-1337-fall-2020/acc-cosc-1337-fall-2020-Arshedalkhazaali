@@ -24,83 +24,32 @@ Display:
 GPA 3.0
 
 */
-int main() 
-{
-	string letter_grade;
-	int credit_hours, sum_credit_hours = 0, sum_credit_points = 0;
-
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade) * credit_hours;
-	sum_credit_hours += credit_hours;
-
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
-
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
-
-
-	double gpa = calculate_gpa(sum_credit_hours, sum_credit_points);
-	cout << "GPA: " << gpa;
-
-	return 0;
-}
-
 int main ()
 {
 	
 	
-	int get_letter_grade_using_if;
-	char letter_grade;
+	std::string letter_grade;
 
 	//to ask user for a number between 1 and 100 I need ....
-	
-	cout<<"Please enter a number between 1-100 and press enter."<<endl;
-	cout<<" The program will then show you "<<endl;
-	cout<<"the letter grade that corresponds to that number."<<endl;
+	int score;
+	cout<<"Please enter a number between 1-100 and press enter."<<std::endl;
+	cout<<" The program will then show you "<<std::endl;
+	cout<<"the letter grade that corresponds to that number."<<std::endl;
 	cin>>score;
 
-	
-	if (score<0 || score >100)
+	if(score >= 0 && score <= 100)
 	{
-		cout<<"Test scores must be in interval 1-100. "<<endl;
-		cout<<"Please exit the program and run it again"<<endl;
+		letter_grade = get_letter_grade_using_if(score);
+		// and I will this code to display the output  
+		cout<<"The letter grade is: " <<letter_grade<<std::endl;
+		
+		letter_grade = get_letter_grade_using_switch(score);
+		cout<<"The letter grade is: " <<letter_grade<<std::endl;
+	}
+	else 
+	{
+		cout<<"Invalid grade";
 	}
 
-	else if (score <60)
-	{ 
-		letterGrade = 'F';
-	}
-	else if (score <70)
-	{
-		letterGrade = 'D';
-	}
-	else if (score < 80)
-	{
-		letterGrade = 'C';
-	}
-	else if (score < 90)
-	{
-		letterGrade = 'B';
-	}
-	else if  (score <=100)
-	{
-		letterGrade = 'A';
-	}  
-
-	// and I will this code to display the output  
-	cout<<"The letter grade is: " <<letter_grade<<endl;
-	system("pause");
 	return 0;
 }
