@@ -1,7 +1,9 @@
 //write include statements
+#include <iostream>
+#include "dna.h"
 
 //write using statements
-
+using std::cout;   using std::cin;
 
 /*
 Write code that prompts user to enter 1 for Get GC Content, 
@@ -11,6 +13,61 @@ function and display the result. Program runs as long as
 user enters a y or Y.
 */
 int main() 
-{
-	return 0;
+  {
+    // declare variables
+    int option;
+    string dna;
+    // repeating the execution till user wants to continue
+    while (1) {
+        // read DNA string
+        cout << "Enter a DNA String: ";
+        cin >> dna;
+
+
+        
+        
+        cout << "\nSelect option" << endl;
+        cout << "1. GC Content" << endl;
+        cout << "2. DNA Complement\n" << endl;
+        
+        cout << "Enter option: ";
+        cin >> option;
+        
+        
+        if (option == 1)
+        {
+            
+            double content = get_gc_content(dna);
+            cout << "GC content: " << content << endl;
+        }
+        
+        else if (option == 2) 
+        {
+            
+            string complement = get_dna_complement(dna);
+            cout << "Complement: " << complement << endl;
+        }
+        
+        else{
+            cout << "Invalid input!" << endl;
+        }
+        
+        char ch;
+        cout << "\nTo continue preess (Y/y): ";
+        cin >> ch;
+        
+        if(ch == 'Y' || ch == 'y') 
+        {
+            cout << "\n" << endl;
+            continue;
+        }
+
+
+        
+        // otherwise no loop to continue
+        else {
+            break;
+        }
+    }
+    return 0;
 }
